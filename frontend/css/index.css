@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#root,.box {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    overflow-y: auto;
+}
+.box .header {
+    width: 100%;
+    height: 5%;
+    border-bottom: 1px solid black;
+}
+.box #top {
+    width: 100%;
+    height: 90%;
+    overflow-y: auto;
+}
+
+#left{
+    margin-bottom: 5px;
+    display: flex;
+    
+}
+#right{
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+#right .Send{
+    background: rgba(226,239,255);
+    padding: 15px;
+    border-radius: 15px;
+    margin-right: -5px;
+    flex-direction: row-reverse;
+}
+#left .Reply{
+    background: rgba(243,244,246);
+    padding: 15px;
+    border-radius: 15px;
+    margin-left: -5px;
+    display: inline-flex;
+    
+}
+.box .bottom {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+}
+.box .bottom input{
+    width: 90%;
+    height: 30px;
+}
+.box .bottom button{
+    width: 10%;
+    height: 30px;
+}
