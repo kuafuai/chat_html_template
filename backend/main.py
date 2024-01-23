@@ -19,8 +19,8 @@ def step(args):
     file_path = args.file
     prompt = args.prompt
 
-    embedding = OpenAIEmbeddings(openai_api_key="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")
-    llm = ChatOpenAI(openai_api_key="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")
+    embedding = OpenAIEmbeddings(openai_api_key="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")
+    llm = ChatOpenAI(openai_api_key="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")
 
     # 根据文件 生成 本地索引
     persist_directory = 'text/'
