@@ -19,7 +19,7 @@ def step(args):
     file_path = args.file
     prompt = args.prompt
 
-    embedding = OpenAIEmbeddings(openai_api_key="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")
+    embedding = OpenAIEmbeddings(openai_api_key="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")
     llm = ChatOpenAI(openai_api_key="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")
 
     # 根据文件 生成 本地索引
