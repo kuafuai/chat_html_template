@@ -18,9 +18,10 @@ def step(args):
     # 初始化 大模型相关 信息
     file_path = args.file
     prompt = args.prompt
+    api_key = args.api_key
 
-    embedding = OpenAIEmbeddings(openai_api_key="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")
-    llm = ChatOpenAI(openai_api_key="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")
+    llm = ChatOpenAI(openai_api_key=api_key)
+    embedding = OpenAIEmbeddings(openai_api_key=api_key)
 
     # 根据文件 生成 本地索引
     persist_directory = 'text/'
@@ -46,7 +47,6 @@ def step(args):
 
 @app.route("/chat", methods=["POST"])
 def chat():
-
     chat_data = [{"input": item['input'], "output": item['output']} for item in request.json]
 
     # chat history
@@ -76,6 +76,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--file', type=str, help="dsl template file path")
     parser.add_argument('--prompt', type=str, default="prompt", help="code work space")
+    parser.add_argument('--api_key', type=str, default="api_key", help="code work space")
     args = parser.parse_args()
 
     step(args)
