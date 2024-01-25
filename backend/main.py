@@ -77,8 +77,10 @@ if __name__ == "__main__":
     parser.add_argument('--file', type=str, help="dsl template file path")
     parser.add_argument('--prompt', type=str, default="prompt", help="code work space")
     parser.add_argument('--api_key', type=str, default="api_key", help="code work space")
+    parser.add_argument('--port', type=int, default="8080", help="code work space")
     args = parser.parse_args()
 
     step(args)
+    port = args.port
 
-    app.run(port=8080)
+    app.run(port=port)
