@@ -1,6 +1,6 @@
 let service = function () {
     let instance = axios.create({
-        timeout: 60000,
+        timeout: 600000,
         crossDomain: true
     })
 
