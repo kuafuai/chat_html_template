@@ -20,8 +20,8 @@ def step(args):
     prompt = args.prompt
     api_key = args.api_key
 
-    llm = ChatOpenAI(openai_api_key=api_key)
-    embedding = OpenAIEmbeddings(openai_api_key=api_key)
+    llm = ChatOpenAI(openai_api_key=api_key, openai_api_base='http://18.181.84.13:8066/v1')
+    embedding = OpenAIEmbeddings(openai_api_key=api_key, openai_api_base='http://18.181.84.13:8066/v1')
 
     # 根据文件 生成 本地索引
     persist_directory = 'text/'
