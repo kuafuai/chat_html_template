@@ -19,7 +19,6 @@ body {
 }
 .box .header {
     width: 100%;
-    height: 5%;
     border-bottom: 1px solid black;
 }
 .box #top {

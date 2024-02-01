@@ -22,11 +22,11 @@
           <template v-for="chat in chats">
             <div style="margin-top: 5px;width: 99%;">
               <div id="right">
-                <img style="border-radius: 50%;margin-left: 10px;" width="55px" src="./css/013db35c13455ca801209252da8d24.png@2o.png" alt="">
+                <img style="border-radius: 50%;margin-left: 10px;" width="55px" height="55px" src="./css/013db35c13455ca801209252da8d24.png@2o.png" alt="">
                 <div class="Send">{{chat.input}}</div>
               </div>
               <div id="left">
-                <img  style="border-radius: 50%;margin-right: 10px;" width="55px" src="./css/20211103054112556.jpg" alt="">
+                <img  style="border-radius: 50%;margin-right: 10px;" width="55px" height="55px" src="./css/20211103054112556.jpg" alt="">
                 <div v-if="!chat.loading" class="Reply">{{chat.output}}</div>
                 <div v-if="chat.loading"><img width="30px" height="30px" src="./css/loading.gif" alt=""></div>
               </div>
